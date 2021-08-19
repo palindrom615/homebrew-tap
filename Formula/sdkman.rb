@@ -5,20 +5,28 @@
 class Sdkman < Formula
   desc "A tool for managing parallel versions of multiple Software Development Kits"
   homepage "https://github.com/palindrom615/sdkman"
-  version "0.4.15"
+  version "0.4.16"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.15/sdkman_0.4.15_Darwin_x86_64.tar.gz"
-      sha256 "23cc0521335556f4946835345c66999cb2cd6168d05d38323f8eb220611d6d5c"
+      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.16/sdkman_0.4.16_Darwin_x86_64.tar.gz"
+      sha256 "f8628c6325f77595e34ee99606fdabf636ce3106eb9c824b6ca7996edd84c6ec"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.15/sdkman_0.4.15_Linux_x86_64.tar.gz"
-      sha256 "bc4de9ce542b5317011249ff9850fcc3ba75f8007cd9fce6e01139f5d4c62310"
+      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.16/sdkman_0.4.16_Linux_x86_64.tar.gz"
+      sha256 "3cc13fbae12035531fcd7ad28d3893b11b8a9a22bbf7b354232a3c9f951e4b95"
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.16/sdkman_0.4.16_Linux_armv6.tar.gz"
+      sha256 "59c6c094136e1a6d23d5ea59f75cfaab9336d5ed4179193ee246f580afca106c"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.16/sdkman_0.4.16_Linux_arm64.tar.gz"
+      sha256 "f878eafdec63e3f1f522137ea8325fcbafc6d9ffb577f3d10a74ace0e66d5b15"
     end
   end
 
