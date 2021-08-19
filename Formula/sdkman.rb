@@ -11,26 +11,26 @@ class Sdkman < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/palindrom615/sdkman/releases/download/v0.4.17/sdkman_0.4.17_Darwin_x86_64.tar.gz"
-      sha256 "658611a23c96694a9fa8dc2b7ecbffb17632b2290f024b203f5350ded5c8fa76"
+      sha256 "454df2a566f8fbcc069bdc063de3ffb92558ce22f99b339238b2984d0522fc61"
     end
     if Hardware::CPU.arm?
       url "https://github.com/palindrom615/sdkman/releases/download/v0.4.17/sdkman_0.4.17_Darwin_arm64.tar.gz"
-      sha256 "f6e7c365f518a452ca764e42e34b94b52c4cbcd4f56704be75c4f2d479e67025"
+      sha256 "82e5d354fd2326d4d52e7f4f27e5732319e451e2be6cd3a2733eaf5d7c9cade6"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/palindrom615/sdkman/releases/download/v0.4.17/sdkman_0.4.17_Linux_x86_64.tar.gz"
-      sha256 "e660422e405694f494c68e1f5df55bf34316f99de58a104e79bd8b49383b5fda"
+      sha256 "ac7b214b44dc37914bc1b479bd2032491f25726725fee6b376d0342359b0a8ed"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/palindrom615/sdkman/releases/download/v0.4.17/sdkman_0.4.17_Linux_armv6.tar.gz"
-      sha256 "f41adaaa0eeace2a46b88cc16d0f0c92a70ddbaba316a37757c77d9aee713d32"
+      sha256 "e68824ae87f45484b0941b9e7a9b8d74343da4f31ffce757ced63acb70106133"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/palindrom615/sdkman/releases/download/v0.4.17/sdkman_0.4.17_Linux_arm64.tar.gz"
-      sha256 "11b045ff50ff99f9baa78248f067538b68c2bbb4eb98200ffa3d0c8a6823928a"
+      sha256 "a7e741f470b2fb69dcb90e6cc98b3e8f6626ba62bd11c3923dabd0bd8bb6e797"
     end
   end
 
