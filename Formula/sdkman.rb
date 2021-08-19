@@ -5,19 +5,24 @@
 class Sdkman < Formula
   desc "A tool for managing parallel versions of multiple Software Development Kits"
   homepage "https://github.com/palindrom615/sdkman"
-  version "0.4.13"
+  version "0.4.14"
   bottle :unneeded
 
-  if OS.mac?
-    url "https://github.com/palindrom615/sdkman/releases/download/v0.4.13/sdkman_0.4.13_Darwin_x86_64.tar.gz"
-    sha256 "3efbe28c03b40a8a91dac461cd9cdf2b6a8b36f4f40793ac50bc7e225898ee22"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.14/sdkman_0.4.14_Darwin_x86_64.tar.gz"
+      sha256 "c697fa49a0b1269854bc1271986a6ea40c331f2c0080d546ae9f09e842303180"
+    end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/palindrom615/sdkman/releases/download/v0.4.13/sdkman_0.4.13_Linux_x86_64.tar.gz"
-    sha256 "b09a40700414619fc874bc2b8925c82bf66385bb246df8c0a31e88fc14604c28"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.14/sdkman_0.4.14_Linux_x86_64.tar.gz"
+      sha256 "bd356d7d9e50e6e55c7ea128b5eca530d063d0e79b1cf02e0734c303c54f21d7"
+    end
   end
 
   def install
-    bin.install "sdk"
+    bin.install "sdkman"
   end
 end
