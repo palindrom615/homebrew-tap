@@ -5,32 +5,32 @@
 class Sdkman < Formula
   desc "A tool for managing parallel versions of multiple Software Development Kits"
   homepage "https://github.com/palindrom615/sdkman"
-  version "0.4.16"
+  version "0.4.17"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.16/sdkman_0.4.16_Darwin_x86_64.tar.gz"
-      sha256 "55a43dedb611f604ac5b71ab0b06aa1aeffaf32e6d4a73ec1ec79493ee80baae"
+      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.17/sdkman_0.4.17_Darwin_x86_64.tar.gz"
+      sha256 "658611a23c96694a9fa8dc2b7ecbffb17632b2290f024b203f5350ded5c8fa76"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.16/sdkman_0.4.16_Darwin_arm64.tar.gz"
-      sha256 "6b23515f90811cb487a1d6bc53fafd70037a065a40cc5cba6665e87f3403189b"
+      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.17/sdkman_0.4.17_Darwin_arm64.tar.gz"
+      sha256 "f6e7c365f518a452ca764e42e34b94b52c4cbcd4f56704be75c4f2d479e67025"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.16/sdkman_0.4.16_Linux_x86_64.tar.gz"
-      sha256 "e4f790c0cbdf419dd4622992a9b48be73469284a86803cb58f41bbc9fadba552"
+      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.17/sdkman_0.4.17_Linux_x86_64.tar.gz"
+      sha256 "e660422e405694f494c68e1f5df55bf34316f99de58a104e79bd8b49383b5fda"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.16/sdkman_0.4.16_Linux_armv6.tar.gz"
-      sha256 "53fda8221c3971d1b46c7c9c34f98401711f3994794a8855f568bb0ec2575198"
+      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.17/sdkman_0.4.17_Linux_armv6.tar.gz"
+      sha256 "f41adaaa0eeace2a46b88cc16d0f0c92a70ddbaba316a37757c77d9aee713d32"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.16/sdkman_0.4.16_Linux_arm64.tar.gz"
-      sha256 "c2c9f13ec8e15579561af648eefec1e47bb18b981dc598a4e44ee45410db125e"
+      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.17/sdkman_0.4.17_Linux_arm64.tar.gz"
+      sha256 "11b045ff50ff99f9baa78248f067538b68c2bbb4eb98200ffa3d0c8a6823928a"
     end
   end
 
