@@ -5,20 +5,20 @@
 class Sdkman < Formula
   desc "A tool for managing parallel versions of multiple Software Development Kits"
   homepage "https://github.com/palindrom615/sdkman"
-  version "0.4.14"
+  version "0.4.15"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.14/sdkman_0.4.14_Darwin_x86_64.tar.gz"
-      sha256 "c697fa49a0b1269854bc1271986a6ea40c331f2c0080d546ae9f09e842303180"
+      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.15/sdkman_0.4.15_Darwin_x86_64.tar.gz"
+      sha256 "23cc0521335556f4946835345c66999cb2cd6168d05d38323f8eb220611d6d5c"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.14/sdkman_0.4.14_Linux_x86_64.tar.gz"
-      sha256 "bd356d7d9e50e6e55c7ea128b5eca530d063d0e79b1cf02e0734c303c54f21d7"
+      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.15/sdkman_0.4.15_Linux_x86_64.tar.gz"
+      sha256 "bc4de9ce542b5317011249ff9850fcc3ba75f8007cd9fce6e01139f5d4c62310"
     end
   end
 
