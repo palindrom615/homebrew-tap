@@ -1,5 +1,6 @@
 # homebrew-tap
-My own homebrew tap
+
+https://docs.brew.sh/Taps
 
 ## How to use
 
