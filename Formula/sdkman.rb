@@ -5,20 +5,20 @@
 class Sdkman < Formula
   desc "A tool for managing parallel versions of multiple Software Development Kits"
   homepage "https://github.com/palindrom615/sdkman"
-  version "0.4.19"
+  version "0.4.20"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.19/sdkman_0.4.19_Darwin_x86_64.tar.gz"
-      sha256 "36e29c730f87295b651921c5d60c4c027c0ee58214983ee22715787007afb651"
+      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.20/sdkman_0.4.20_Darwin_x86_64.tar.gz"
+      sha256 "def63169d76ec305591a3646b1e254ecfa31732ad26f4263c0475dce375023cf"
 
       def install
         bin.install "sdk"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.19/sdkman_0.4.19_Darwin_arm64.tar.gz"
-      sha256 "44aa7147076d2f22ca3e328fe057f233fabcc0ab2838892163053a20d75d60f7"
+      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.20/sdkman_0.4.20_Darwin_arm64.tar.gz"
+      sha256 "2035a4c6a2d1e8327ee7b59f3132c6e2d903f1e617db1cbcfb82e74815c3cf24"
 
       def install
         bin.install "sdk"
@@ -28,24 +28,24 @@ class Sdkman < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.19/sdkman_0.4.19_Linux_armv6.tar.gz"
-      sha256 "10a58e2f4567731d9fff52ded452d6f32c70a8491215cf88573edd98b85ff074"
-
-      def install
-        bin.install "sdk"
-      end
-    end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.19/sdkman_0.4.19_Linux_arm64.tar.gz"
-      sha256 "663150fd835f2f3ac2517f2e244fad16a64272fbbf6cfe2b380de64c06573940"
+      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.20/sdkman_0.4.20_Linux_armv6.tar.gz"
+      sha256 "1e7170508c825eb8d853cd5ee37ac582dc9f1e492ed98972543f4d062486901d"
 
       def install
         bin.install "sdk"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.19/sdkman_0.4.19_Linux_x86_64.tar.gz"
-      sha256 "8f8225ec465b46d780de44f282ffb78fb765f5712bad1e79efccdba5c1307c72"
+      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.20/sdkman_0.4.20_Linux_x86_64.tar.gz"
+      sha256 "d6ca883f941e79e4f3d70dc3d4a6d60f74baf81d3dbb0b615a0fa683e409bf8f"
+
+      def install
+        bin.install "sdk"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/palindrom615/sdkman/releases/download/v0.4.20/sdkman_0.4.20_Linux_arm64.tar.gz"
+      sha256 "a9cadfca34a2ff6b5f019b95d40fe52e5036d7cb77038cab1c2832b5b7a9cb49"
 
       def install
         bin.install "sdk"
