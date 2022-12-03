@@ -5,5 +5,5 @@ https://docs.brew.sh/Taps
 ## How to use
 
 ```sh
-brew tap palindrom615/homebrew-tap
+brew tap palindrom615/tap
 ```
